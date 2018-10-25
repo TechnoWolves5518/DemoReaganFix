@@ -30,26 +30,26 @@ public class DriveCom extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	isA = OI.xboxController.getRawButton(RobotMap.XBOX_ABUTTON);
-    	
+    	// isA = OI.xboxController.getRawButton(RobotMap.XBOX_ABUTTON);
+    	/*
     	if (isA != wasA && isA == true) {
     		driveEnabled = !driveEnabled;
-    	}
+    	} */
     	
-    	if (driveEnabled) {
+    	if (/*driveEnabled*/true) {
     		driveSpeed = OI.xboxController.getRawAxis(RobotMap.XBOX_LSTICKY);
-        	turnSpeed = OI.xboxController.getRawAxis(RobotMap.XBOX_RSTICKX);
+        	turnSpeed = OI.xboxController2.getRawAxis(RobotMap.XBOX_RSTICKX);
     	}
     	else {
     		driveSpeed = 0;
     		turnSpeed = 0;
     	}
     	
-    	intakeSpeed = OI.xboxController.getRawAxis(RobotMap.XBOX_LTRIGGER);
+    	intakeSpeed = OI.xboxController2.getRawAxis(RobotMap.XBOX_LTRIGGER);
     	shooterSpeed = OI.xboxController.getRawAxis(RobotMap.XBOX_RTRIGGER);
     	
     	revIntake = OI.xboxController.getRawButton(RobotMap.XBOX_LBUMPER);
-    	revShooter = OI.xboxController.getRawButton(RobotMap.XBOX_RBUMPER);
+    	revShooter = OI.xboxController2.getRawButton(RobotMap.XBOX_RBUMPER);
     	
     	Robot.driveTrainSub.arcadeDrive(driveSpeed, turnSpeed);
     	
