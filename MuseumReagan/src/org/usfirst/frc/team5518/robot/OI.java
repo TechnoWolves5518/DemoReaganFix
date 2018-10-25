@@ -16,5 +16,6 @@ import edu.wpi.first.wpilibj.Joystick;
 public class OI {
 	
 	public static Joystick xboxController = new Joystick(0);
+	public static Joystick xboxController2 = new Joystick(1);
 	
 }
